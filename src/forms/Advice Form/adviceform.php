@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" 
-    charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Advice Form</title>
     <style>
-        
     * {
         box-sizing: border-box;
     }
 
     .contain {
         max-width: 1170px;
-        height:297mm;
-        width:210mm;
+        height: 297mm;
+        width: 210mm;
         padding: 1em;
         margin: auto;
         border: 1px solid black;
         padding: 10px;
     }
-    
-    body {
+
+    .contain2 {
+        max-width: 1170px;
+        height: 297mm;
+        width: 210mm;
+        padding: 1em;
+        margin: auto;
+        border: 1px solid black;
+        padding: 10px;
         font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
-        font-size: 61.25%;
+        font-size: 137.25%;
+    }
+
+    div {
+        font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+        font-size: 77.25%;
     }
 
     h1 {
@@ -32,7 +43,7 @@
     h3 {
         margin: 0;
         margin-bottom: 1rem;
-        font-size:90.25%;
+        font-size: 90.25%;
     }
 
     input,
@@ -49,11 +60,14 @@
         margin-bottom: 2.54cm;
         margin-right: 0.1cm;
         margin-left: 0.1cm;
+
     }
 
     form label {
         display: block;
     }
+
+
 
     form p {
         margin: 0;
@@ -70,6 +84,12 @@
         padding: 0.2em;
     }
 
+    output{
+        border: 1px solid #000;
+        padding: 0.09em;
+    }
+
+
     .Submit {
         background: lightgrey;
         width: 200%;
@@ -77,6 +97,7 @@
     }
     </style>
 </head>
+
 <body>
     <?php
      /**
@@ -85,8 +106,8 @@
       * @category Description
       * @package  PHP
       * @author   Vilho Nguno <vilhonguno@gmail.com>
-      * @license  http://localhost:4000/php/af.php Advice Form
-      * @link     http://localhost:4000/php/af.php
+      * @license  http://localhost:4000/php/adviceform.php Advice Form
+      * @link     http://localhost:4000/php/adviceform.php
       * Define variables and set to empty values 
       */
     $adviceNR = $persNum = $persMember = $dateOfImple = $salaryNPA 
@@ -145,13 +166,19 @@
 
     <div class="contain">
         <div class="form">
-            <h1><center>NOTICE OF APPOINTMENT/AMENDMENTS/RESIGNATION</center></h1>
+            <h1>
+                <center>NOTICE OF APPOINTMENT/AMENDMENTS/RESIGNATION</center>
+            </h1>
             <form method="post" action="
             <?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+                <P>
+                    <label for="">Adivce Number</label>
+                    <input type="text" name="adviceNum">
+                </P>
+                <P></P>
                 <p>
                     <label for="">Personnel Member</label>
-                    <input type="text" name="persMember" 
-                    value="<?php echo $persMember;?>">
+                    <input type="text" name="persMember">
                 </p>
                 <p>
                     <label for="">Personnel Number</label>
@@ -161,37 +188,37 @@
                     <label for="">Date of Implementation</label>
                     <input type="date" name="dateOfImple">
                     <br><br>
-                </p>    
+                </p>
                 <p>
-                    <h3>APPOINTMENTS/AMENDMENTS:</h3> <br>
-                        <label for=""> ADDENDUMS: </label>
+                <h3>APPOINTMENTS/AMENDMENTS:</h3> <br>
+                <label for=""> ADDENDUMS: </label>
                 </p>
                 <p>
                     <label>Applicant to pay salary into bank account</label>
                     <center><input type="checkbox"></center>
-                    
-                    <label >PAYE 2 form</label>
-                    <center><input type="checkbox"></center>
-                    
-                    <label >Housing/Rental Agreement</label>
+
+                    <label>PAYE 2 form</label>
                     <center><input type="checkbox"></center>
 
-                    <label >Medical form </label>
-                    <center><input type="checkbox"></center>
-                    
-                    <label >Social Security form </label>
+                    <label>Housing/Rental Agreement</label>
                     <center><input type="checkbox"></center>
 
-                    <label >Pension Form </label>
+                    <label>Medical form </label>
+                    <center><input type="checkbox"></center>
+
+                    <label>Social Security form </label>
+                    <center><input type="checkbox"></center>
+
+                    <label>Pension Form </label>
                     <center><input type="checkbox"></center>
                 </p>
                 <p><br></p>
                 <p>
-                <label for="">Salary Notch Per Annum</label>
+                    <label for="">Salary Notch Per Annum</label>
                     <input type="text" name="salaryNPA">
                 </p>
                 <p>
-                <label for="">Salary TCOE</label>
+                    <label for="">Salary TCOE</label>
                     <input type="text" name="salaryTCOE">
                 </p>
                 <p>
@@ -205,17 +232,17 @@
                 <p></p>
                 <p> </p>
                 <p>
-                    <label >38% of Basic Salary </label>
+                    <label>38% of Basic Salary </label>
                     <center><input type="checkbox"></center>
-                    <label >TCOE</label>
+                    <label>TCOE</label>
                     <center><input type="checkbox"></center>
                 </p>
                 <p>
-                    
+
                 </p>
                 <p> </p>
                 <p>
-                    <h4>Allowances </h4>
+                <h4>Allowances </h4>
                 </p>
                 <p>
                     <label for="">Identification</label>
@@ -235,14 +262,14 @@
                 </p>
                 <p> </p>
                 <p>
-                    <h4>RESIGNATION</h4> <br>
-                    <label for=""> ADDENDUMS: </label>
+                <h4>RESIGNATION</h4> <br>
+                <label for=""> ADDENDUMS: </label>
                 </p>
                 <p>
                     <label>Payment for Benefits Form</label>
                     <center><input type="checkbox"></center>
-                    
-                    <label >Resignation Letter</label>
+
+                    <label>Resignation Letter</label>
                     <center><input type="checkbox"></center>
                 </p>
                 <p> </p>
@@ -266,14 +293,14 @@
                     <input type="text" name="deductDebt">
                 </p>
                 <p> </p>
-                <p> 
+                <p>
                     <label>Housing Deduction</label>
                     <center><input type="checkbox"></center>
-                    
-                    <label >Unpaid Leave</label>
+
+                    <label>Unpaid Leave</label>
                     <center><input type="checkbox"></center>
-                    
-                    <label >Other (specify)</label>
+
+                    <label>Other (specify)</label>
                     <center><input type="checkbox"></center>
                 </p>
                 <p> </p>
@@ -284,7 +311,7 @@
                 <p> </p>
                 <p><br></p>
                 <p>
-                    <h3>HUMAN RESOURCES DEPARTMENT</h3> <br>
+                <h3>HUMAN RESOURCES DEPARTMENT</h3> <br>
                 </p>
                 <p> </p>
                 <p>
@@ -296,12 +323,12 @@
                 </p>
                 <p>
                     <label for="">Date:</label>
-                    <input type="date" name="date">
+                    <input type="date" name="date1">
 
                     <label for="">Date:</label>
                     <input type="date" name="date2">
                 </p>
-                    <h3>FINANCE DEPARTMENT</h3> <br>
+                <h3>FINANCE DEPARTMENT</h3> <br>
                 </p>
                 <p> </p>
                 <p>
@@ -320,65 +347,199 @@
                 </p>
                 <br>
                 <p> </p>
-            <center>
-                <input type="submit" name="submit" value="Submit">
-            </center>
+                <center>
+                    <input type="submit" name="submit" value="Submit">
+                </center>
             </form>
 
             <?php
             echo "<h2>Your Input:</h2>";
-            echo $adviceNR; 
-            echo "<br>";
-            echo $persNum;
-            echo "<br>";
-            echo $persMember;
-            echo "<br>";
-            echo $dateOfImple;
-            echo "<br>";
-            echo $salaryNPA ;
-            echo "<br>";
-            echo $salaryTCOE;
-            echo "<br>";
-            echo $housingAllow;
-            echo "<br>";
-            echo $rentalAllow;
-            echo "<br>";
-            echo $identification ;
-            echo "<br>";
-            echo $decuctions;
-            echo "<br>";
-            echo $amount1;
-            echo "<br>";
-            echo $amount2;
-            echo "<br>";
-            echo $leaveCredit;
-            echo "<br>";
-            echo $proData ;
-            echo "<br>";
-            echo $DOB ;
-            echo "<br>";
-            echo $deductDebt ;
-            echo "<br>";
-            echo $otherSpecify ;
-            echo "<br>";
-            echo $date1 ;
-            echo "<br>";
-            echo $date2 ;
-            echo "<br>";
-            echo $date3 ;
-            echo "<br>";
-            echo $date4 ;
-            echo "<br>";
-            echo $compiledBy;
-            echo "<br>";
-            echo $approvedBy;
-            echo "<br>";
-            echo $compiledBy2;
-            echo "<br>";
-            echo $approvedBy2;
-            echo "<br>";
+
+            echo <<<END
+            <div class="contain2">
+            <div class="form">
+            <h1><center>NOTICE OF APPOINTMENT/AMENDMENTS/RESIGNATION</center></h1>
+            <form method="post" action=">
+                <p>
+                    <label for="">Advice Number: <br>$adviiceNum</label>
+                </p>
+                <p> <br>
+                    <label for="">Personnel Member <br>$persMember</label>
+                </P>
+                <p><br>
+                    <label for="">Personnel Number: <br> $persNum </label>
+                </p>
+                <p><br>
+                    <label for="">Date of Implementation <br> $dateOfImple</label>
+                    <br><br>
+                </p>    
+                <p>
+                    <h3>APPOINTMENTS/AMENDMENTS:</h3> 
+                    <br><label for=""> ADDENDUMS: </label>
+                </p>
+                <p><br>
+                    <label>Applicant to pay salary into bank account</label>
+                    <center><input type="checkbox"></center>
+                    
+                    <label >PAYE 2 form</label>
+                    <center><input type="checkbox"></center>
+                    
+                    <label >Housing/Rental Agreement</label>
+                    <center><input type="checkbox"></center>
+
+                    <label >Medical form </label>
+                    <center><input type="checkbox"></center>
+                    
+                    <label >Social Security form </label>
+                    <center><input type="checkbox"></center>
+
+                    <label >Pension Form </label>
+                    <center><input type="checkbox"></center>
+                </p>
+                <p><br></p>
+                <p>
+                <label for="">Salary Notch Per Annum<br>$salaryNPA</label>
+                </p>
+                <p>
+                <label for="">Salary TCOE</label>
+                    $salaryTCOE
+                </p>
+                <p><br>
+                    <label for="">Housing Allowance</label>
+                    $housingAllow
+                </p>
+                <p><br>
+                    <label for="">Rental Allowance</label>
+                    $rentalAllow
+                </p>
+                <p></p>
+                <p></p>
+                <p><br>
+                    <label >38% of Basic Salary </label>
+                    <center><input type="checkbox"></center>
+                    <label >TCOE</label>
+                    <center><input type="checkbox"></center>
+                </p>
+                <p>
+                    
+                </p>
+                <p> </p>
+                <p>
+                    <h4>Allowances </h4>
+                </p>
+                <p>
+                    <label for="">Identification</label>
+                    $identification
+                </p>
+                <p>
+                    <label for="">Amount</label>
+                    $amount1
+                </p>
+                <p>
+                    <label for="">Deductions</label>
+                    $decuctions
+                </p>
+                <p>
+                    <label for="">Amount</label>
+                    $amount2
+                </p>
+                <p> </p>
+                <p>
+                    <h4>RESIGNATION</h4><br>
+                    <label for=""> ADDENDUMS: </label>
+                </p>
+                <p><br>
+                    <label>Payment for Benefits Form</label>
+                    <center><input type="checkbox"></center>
+                    
+                    <label >Resignation Letter</label>
+                    <center><input type="checkbox"></center>
+                </p>
+                <p> </p>
+                <p>
+                    <label for="">DOB: </label>
+                    $DOB
+                </p>
+                <p> <br><br> </p>
+                <p>
+                    <label for="">Leave Credit: Day(s)</label>
+                    $leaveCredit
+                </p>
+                <p>
+                    <label for="">Pro-rata bonus: Day(s)</label>
+                    $proData
+                </p>
+                <p> </p>
+                <p> </p>
+                <p><br>
+                    <label for="">Deduction(s) regarding departmental debt: </label>
+                    $deductDebt
+                </p>
+                <p> </p>
+                <p> <br>
+                    <label>Housing Deduction</label>
+                    <center><input type="checkbox"></center>
+                    
+                    <label >Unpaid Leave</label>
+                    <center><input type="checkbox"></center>
+                    
+                    <label >Other (specify)</label>
+                    <center><input type="checkbox"></center>
+                </p>
+                <p> </p>
+                <p>
+                    <label for=""></label>
+                    $otherSpecify
+                </p>
+                <p> </p>
+                <p><br></p>
+                <p>
+                    <h3>HUMAN RESOURCES DEPARTMENT</h3> <br>
+                </p>
+                <p> </p>
+                <p>
+                    <label for="">Compiled By:</label>
+                    $compiledBy
+                    <br>
+                    <label for="">Approved By:</label>
+                    $approvedBy
+                </p>
+                <p>
+                    <label for="">Date:</label>
+                    $date1
+                    <br>
+                    <label for="">Date:</label>
+                    $date2
+                </p><br>
+                <p>
+                    <h3>FINANCE DEPARTMENT</h3> <br>
+                </p>
+                <p> </p>
+                <p>
+                    <label for="">Compiled By:</label>
+                    $compiledBy2
+                    <br>
+                    <label for="">Approved By:</label>
+                    $approvedBy2
+                </p>
+                <p>
+                    <label for="">Date:</label>
+                    $date3
+                    <br>
+                    <label for="">Date:</label>
+                    $date4
+                </p>
+                <br>
+                <p> </p>
+            </form>
+            </div>
+            </div>
+
+            \n
+            END;
             ?>
         </div>
     </div>
 </body>
+
 </html>
