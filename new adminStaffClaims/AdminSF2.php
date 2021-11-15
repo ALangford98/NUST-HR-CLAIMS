@@ -147,7 +147,7 @@
      * @link     http://localhost:4000/php/adviceform.php
      * Define variables and set to empty values 
      */
-     $title= $firstname= $lastname= $personnelnumber= $highestqualification= $budgetallocation $IdentityPassportNumber= $Tariffperhourday= $Address= $PAYENumber $TelNumber $HRTOTALHOURSCLAIMED= $FacultyDepartment= $Position= $ClaimantSignature= $Date= $SignatureofSupervisor= $Date1= $SignatureofDirectorHead= $Date2= $ProcessedbyPayroll= $Date3  ="";
+     $title= $firstname= $lastname= $personnelnumber= $highestqualification= $budgetallocation $IdentityPassportNumber= $Tariffperhourday= $Address= $PAYENumber $TelNumber $HRTOTALHOURSCLAIMED= $FacultyDepartment= $Position= $ClaimantSignature= $Date= $SignatureofSupervisor= $Date1= $SignatureofDirectorHead= $Date2= $ProcessedbyPayroll= $Date3= $date4= $timefromto1= $hours1= $n1= $forOfficeUse1 =$date5= $timefromto2= $hours2= $n2= $forOfficeUse2 =$date6= $timefromto3= $hours3= $n3= $forOfficeUse3 =$date7= $timefromto4= $hours4= $n4= $forOfficeUse4 =$date8= $timefromto5= $hours5= $n5= $forOfficeUse5 =$date9= $timefromto6= $hours6= $n6= $forOfficeUse6 =$date10= $timefromto7= $hours7= $n7= $forOfficeUse7 =$date11= $timefromto8= $hours8= $n8= $forOfficeUse8 =$date12= $timefromto9= $hours9= $n9= $forOfficeUse9 =$date13= $timefromto10= $hours10= $n10= $forOfficeUse10 ="";
 
      $title = test_input ($_POST["title"]);
     $firstname =test_input ($_POST["firstname"]);
@@ -172,7 +172,66 @@
     $ProcessedbyPayroll = test_input ($_POST["ProcessedbyPayroll"]);
     $Date3 = test_input ($_POST["Date3"]);
 
+    $date4= test_input ($_POST["date4"]);
+        $timefromto1= test_input ($_POST["timefromto1"]);
+            $hours1= test_input ($_POST["hours1"]);
+                $n1= test_input ($_POST["n1"]); 
+                    $forOfficeUse1 test_input ($_POST["forOfficeUse1"]);
     
+    $date5= test_input ($_POST["date5"]);
+        $timefromto2= test_input ($_POST["timefromto2"]);
+            $hours2= test_input ($_POST["hours2"]);
+                $n2= test_input ($_POST["n2"]); 
+                    $forOfficeUse2 test_input ($_POST["forOfficeUse2"]);
+    
+    $date6= test_input ($_POST["date6"]);
+        $timefromto3= test_input ($_POST["timefromto3"]);
+            $hours3= test_input ($_POST["hours3"]);
+                $n3= test_input ($_POST["n3"]); 
+                    $forOfficeUse3 test_input ($_POST["forOfficeUse3"]);
+    
+    $date7= test_input ($_POST["date7"]);
+        $timefromto4= test_input ($_POST["timefromto4"]);
+            $hours4= test_input ($_POST["hours4"]);
+                $n4= test_input ($_POST["n4"]); 
+                    $forOfficeUse4 test_input ($_POST["forOfficeUse4"]);
+    
+    $date8= test_input ($_POST["date8"]);
+        $timefromto5= test_input ($_POST["timefromto5"]);
+            $hours5= test_input ($_POST["hours5"]);
+                $n5= test_input ($_POST["n5"]); 
+                    $forOfficeUse5 test_input ($_POST["forOfficeUse5"]);
+    
+    $date9= test_input ($_POST["date9"]);
+        $timefromto6= test_input ($_POST["timefromto6"]);
+            $hours6= test_input ($_POST["hours6"]);
+                $n6= test_input ($_POST["n6"]); 
+                    $forOfficeUse6 test_input ($_POST["forOfficeUse6"]);
+    
+    $date10= test_input ($_POST["date10"]);
+        $timefromto7= test_input ($_POST["timefromto7"]);
+            $hours7= test_input ($_POST["hours7"]);
+                $n7= test_input ($_POST["n7"]); 
+                    $forOfficeUse7 test_input ($_POST["forOfficeUse7"]);
+    
+    $date11= test_input ($_POST["date11"]);
+        $timefromto8= test_input ($_POST["timefromto8"]);
+            $hours8= test_input ($_POST["hours8"]);
+                $n8= test_input ($_POST["n8"]); 
+                    $forOfficeUse8 test_input ($_POST["forOfficeUse8"]);
+    
+    $date12= test_input ($_POST["date12"]);
+        $timefromto9= test_input ($_POST["timefromto9"]);
+            $hours9= test_input ($_POST["hours9"]);
+                $n9= test_input ($_POST["n9"]); 
+                    $forOfficeUse9 test_input ($_POST["forOfficeUse9"]);
+    
+    $date13= test_input ($_POST["date13"]);
+        $timefromto10= test_input ($_POST["timefromto10"]);
+            $hours10= test_input ($_POST["hours10"]);
+                $n10= test_input ($_POST["n10"]); 
+                    $forOfficeUse10 test_input ($_POST["forOfficeUse10"]);
+                        
 
     /**
      * Undocumented function
@@ -272,84 +331,84 @@ echo <<<END
             </tr>
             <tr>
                 <td>1</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                       <td><input type="text" value = "$date4" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto1"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours1" style = "background-color: white"></td>
+                <td><input type="text" value = "$n1" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse1" style = "background-color: white"></td>
 
             </tr>
             <tr>
                 <td>2</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                        <td><input type="text" value = "$date5" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto2"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours2" style = "background-color: white"></td>
+                <td><input type="text" value = "$n2" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse2" style = "background-color: white"></td>
             </tr>
             <tr>
                 <td>3</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                        <td><input type="text" value = "$date6" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto3"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours3" style = "background-color: white"></td>
+                <td><input type="text" value = "$n3" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse3" style = "background-color: white"></td>
             </tr>
             <tr>
                 <td>4</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                        <td><input type="text" value = "$date7" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto4"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours4" style = "background-color: white"></td>
+                <td><input type="text" value = "$n4" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse4" style = "background-color: white"></td>
             </tr>
             <tr>
                 <td>5</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                        <td><input type="text" value = "$date8" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto5"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours5" style = "background-color: white"></td>
+                <td><input type="text" value = "$n5" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse5" style = "background-color: white"></td>
             </tr>
             <tr>
                 <td>6</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                        <td><input type="text" value = "$date9" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto6"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours6" style = "background-color: white"></td>
+                <td><input type="text" value = "$n6" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse6" style = "background-color: white"></td>
             </tr>
             <tr>
                 <td>7</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                        <td><input type="text" value = "$date10" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto7"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours7" style = "background-color: white"></td>
+                <td><input type="text" value = "$n7" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse7" style = "background-color: white"></td>
             </tr>
             <tr>
                 <td>8</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                        <td><input type="text" value = "$date11" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromt8"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours8" style = "background-color: white"></td>
+                <td><input type="text" value = "$n8" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse8" style = "background-color: white"></td>
             </tr>
             <tr>
                 <td>9</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                        <td><input type="text" value = "$date12" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto9"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours9" style = "background-color: white"></td>
+                <td><input type="text" value = "$n9" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse9" style = "background-color: white"></td>
             </tr>
             <tr>
                 <td>10</td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
-                <td><input type="text" style = "background-color: white"></td>
+                       <td><input type="text" value = "$date13" style = "background-color: white"></td>
+                <td><input type="text" value = "$timefromto10"style = "background-color: white"></td>
+                <td><input type="text" value = "$hours10" style = "background-color: white"></td>
+                <td><input type="text" value = "$n10" style = "background-color: white"></td>
+                <td><input type="text" value = "$forOfficeUse10" style = "background-color: white"></td>
             </tr>
         </table>
     </center>
